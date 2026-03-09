@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 75% 6%; /* #05091A */
+    --foreground: 220 25% 64%; /* #8A9BBF body text */
+
+    --card: 220 52% 14%; /* #111D35 */
+    --card-foreground: 220 25% 64%;
+
+    --popover: 220 52% 14%;
+    --popover-foreground: 220 25% 64%;
+
+    --primary: 348 100% 45%; /* #E8002D Japan red */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 170 100% 39%; /* #00C9A7 teal */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 224 40% 10%; /* #0D1526 */
+    --muted-foreground: 220 25% 64%; /* #8A9BBF */
+
+    --accent: 170 100% 39%; /* teal */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 348 100% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 100% / 0.07;
+    --input: 0 0% 100% / 0.07;
+    --ring: 348 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --heading: 0 0% 100%; /* white */
+    --subheading: 222 30% 82%; /* #C5CDE0 */
+    --card-hover-border: 348 100% 45% / 0.4;
+    --card-hover-glow: 0 0 20px rgba(232,0,45,0.08);
+    --footer-bg: 224 50% 4%; /* #030712 */
+    --footer-text: 218 17% 35%; /* #4A5568 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--heading));
+  }
+}
